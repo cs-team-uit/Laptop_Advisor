@@ -22,7 +22,7 @@ namespace BuyLaptop
             {
                 String[] empty_param = { "" };
                 PlEngine.Initialize(empty_param);
-                Application.Run(new Form1());
+                Application.Run(new frm_Main());
                 PlEngine.PlCleanup();
             }
         }

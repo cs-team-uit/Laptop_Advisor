@@ -1,0 +1,12 @@
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\BuyLaptop.exe.config
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\BuyLaptop.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\BuyLaptop.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\nunit.framework.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\SwiPlCs.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\bin\Debug\SwiPlCs.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.Properties.Resources.resources
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.frm_Main.resources
+\\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.csprojResolveAssemblyReference.cache

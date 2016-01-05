@@ -41,21 +41,32 @@ namespace Connect_Prolog
             {
                 PlQuery q = new PlQuery(s);
                 bool HasSolution = false;
+                //q.ToList();
                 foreach (PlQueryVariables v in q.SolutionVariables)
                 {
+
                     HasSolution = true;
-                    foreach (Match match in matches)
-                    {
-                        result += v[match.ToString()].ToString() + " ; ";
-                    }
+                    //foreach (Match match in matches)
+                    //{
+                        try
+                        {
+                            result += v["X"].ToString() + " ; ";
+                        }
+                        catch (ArgumentException e)
+                        {
+                            continue;
+			            }
+                    //}
                 }
+               
                 if (matches.Count == 0)
                     return HasSolution ? "true" : "false";
                 return result;
             }
             catch (SbsSW.SwiPlCs.Exceptions.PlException ex)
             {
-                return "Error query: " + ex.Message;
+                //return "Error query: " + ex.Message;
+                return "";
             }
         }
     }
