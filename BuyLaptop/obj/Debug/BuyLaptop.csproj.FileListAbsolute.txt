@@ -10,3 +10,15 @@
 \\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.pdb
 \\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.frm_Main.resources
 \\Mac\Home\Documents\Visual Studio 2013\Projects\Laptop_Advisor-master\BuyLaptop\obj\Debug\BuyLaptop.csprojResolveAssemblyReference.cache
+D:\BuyLaptop\BuyLaptop\bin\Debug\BuyLaptop.exe.config
+D:\BuyLaptop\BuyLaptop\bin\Debug\BuyLaptop.exe
+D:\BuyLaptop\BuyLaptop\bin\Debug\BuyLaptop.pdb
+D:\BuyLaptop\BuyLaptop\bin\Debug\System.Data.SQLite.dll
+D:\BuyLaptop\BuyLaptop\bin\Debug\SwiPlCs.xml
+D:\BuyLaptop\BuyLaptop\bin\Debug\System.Data.SQLite.xml
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.csprojResolveAssemblyReference.cache
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.frm_Main.resources
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.Properties.Resources.resources
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.csproj.GenerateResource.Cache
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.exe
+D:\BuyLaptop\BuyLaptop\obj\Debug\BuyLaptop.pdb

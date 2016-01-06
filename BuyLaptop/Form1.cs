@@ -8,17 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Connect_Prolog;
+using System.Data.SQLite;
 
 namespace BuyLaptop
 {
     public partial class frm_Main : Form
     {
 		Connect_Prolog.ConnectProlog connect;
+		SQLiteConnection m_dbConnection;
+
+		Resources m_resources;
+
 		public frm_Main()
         {
 			connect = new ConnectProlog();
 			InitializeComponent();
-        }
+
+			m_resources = new Resources();
+		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -95,6 +102,9 @@ namespace BuyLaptop
                             return;
                     }
             }
+
+			m_dbConnection = new SQLiteConnection("Data Source=laptop.s3db;Version=3;");
+			m_dbConnection.Open();
 		}
 	}
 }
