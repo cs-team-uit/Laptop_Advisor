@@ -12,15 +12,15 @@ using System.Data.SQLite;
 
 namespace BuyLaptop
 {
-    public partial class frm_Main : Form
-    {
+	public partial class frm_Main : Form
+	{
 		Connect_Prolog.ConnectProlog connect;
 		SQLiteConnection m_dbConnection;
 
 		Resources m_resources;
 
 		public frm_Main()
-        {
+		{
 			connect = new ConnectProlog();
 			InitializeComponent();
 
@@ -40,71 +40,79 @@ namespace BuyLaptop
 
 		private void btn_query_Click(object sender, EventArgs e)
 		{
-            string price ;
-            string brand;
-            string cpu;
-            string vga;
-            string ram ;
-            string query;
-            if (cbb_price.SelectedIndex == 0 || cbb_price.SelectedIndex == -1)
-                price = "_";
-            else
-                price = cbb_price.SelectedIndex.ToString();
+			string price;
+			string brand;
+			string cpu;
+			string vga;
+			string ram;
+			string query;
+			if (cbb_price.SelectedIndex == 0 || cbb_price.SelectedIndex == -1)
+				price = "_";
+			else
+				price = cbb_price.SelectedIndex.ToString();
 
-            if (cbb_brand.SelectedIndex == 0 || cbb_brand.SelectedIndex == -1)
-                brand = "_";
-            else
-                brand = cbb_brand.SelectedIndex.ToString();
+			if (cbb_brand.SelectedIndex == 0 || cbb_brand.SelectedIndex == -1)
+				brand = "_";
+			else
+				brand = cbb_brand.SelectedIndex.ToString();
 
-            if (cbb_cpu.SelectedIndex == 0 || cbb_cpu.SelectedIndex == -1)
-                cpu = "_";
-            else
-                cpu = cbb_cpu.SelectedIndex.ToString();
+			if (cbb_cpu.SelectedIndex == 0 || cbb_cpu.SelectedIndex == -1)
+				cpu = "_";
+			else
+				cpu = cbb_cpu.SelectedIndex.ToString();
 
-            if (cbb_ram.SelectedIndex == 0 || cbb_ram.SelectedIndex == -1)
-                ram = "_";
-            else
-                ram = cbb_ram.SelectedIndex.ToString();
+			if (cbb_ram.SelectedIndex == 0 || cbb_ram.SelectedIndex == -1)
+				ram = "_";
+			else
+				ram = cbb_ram.SelectedIndex.ToString();
 
-            if (cbb_ram.SelectedIndex == -1)
-                vga = "_";
-            else
-                vga = cbb_ram.SelectedIndex.ToString();
+			if (cbb_ram.SelectedIndex == -1)
+				vga = "_";
+			else
+				vga = cbb_ram.SelectedIndex.ToString();
 
-            
 
-            query = "laptop(" + price + "," + brand + "," + cpu + "," + vga + "," + ram + ",X).";
+
+			query = "laptop(" + price + "," + brand + "," + cpu + "," + vga + "," + ram + ",X).";
 			String s = connect.Query(query);
-            string[] words = s.Split(';');
-            foreach (string word in words)
-            {
-                int msubword = 0;
-                string[] subword = word.Split(' ');
-                for (int i = 0; i < 3;i++ )
-                    try
-                    {
-                        if (subword[i].Length == 0x00000005)
-                        {
-                            msubword = i;
-                            break;
-                        }
-                    }
-                    catch (IndexOutOfRangeException ex)
-                    {
-                        break;
-                    }
-                    switch (subword[msubword])
-                    {
-                        case "11111":
-                            listBox1.Items.Add("Duoi 10 trieu, dell, celeron, 14 inch, ram 2gb, khong card vga, o cung");
-                            break;
-                        default:
-                            return;
-                    }
-            }
+			string[] words = s.Split(';');
+			foreach (string word in words)
+			{
+				int msubword = 0;
+				string[] subword = word.Split(' ');
+				for (int i = 0; i < 3; i++)
+					try
+					{
+						if (subword[i].Length == 0x00000005)
+						{
+							msubword = i;
+							break;
+						}
+					}
+					catch (IndexOutOfRangeException ex)
+					{
+						break;
+					}
+				//switch (subword[msubword])
+				//{
+				//    case "11111":
+				//        listBox1.Items.Add("Duoi 10 trieu, dell, celeron, 14 inch, ram 2gb, khong card vga, o cung");
+				//        break;
+				//    default:
+				//        return;
+				//}
 
-			m_dbConnection = new SQLiteConnection("Data Source=laptop.s3db;Version=3;");
-			m_dbConnection.Open();
+				try
+				{
+					string _result = subword[msubword];
+					string sql = "select * from product where brand=\"" + Statics.Brand[_result[1] - 49] + "\" and cpu=\"" +
+						Statics.CPU[_result[2] - 49] + "\" and vga=\"" + Statics.VGA[_result[3] - 49] + "\" and size=\"" + Statics.ScreenSize[_result[4] - 49] + "\"";
+				}
+				catch
+				{
+
+				}
+			}
 		}
 	}
 }
