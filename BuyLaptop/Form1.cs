@@ -135,20 +135,15 @@ namespace BuyLaptop
                         switch (_result[3] - 48)
                         {
                             case 1:
-                                _priceCondition = "price>=0 and price<=10000000";
+                                _priceCondition = "price>=0 and price<=10000";
                                 break;
                             case 2:
-                                _priceCondition = "price>= 10000000 and price<=20000000";
+                                _priceCondition = "price>10000 and price<20000";
                                 break;
                         }
                         string sql;
-                        //if (rbnAskBrandY.Checked)
                         sql = "select * from product where brand=\"" + BuyLaptop.Resources.Statics.Brand[_result[1] - 49] + "\" and type=\"" +
                            BuyLaptop.Resources.Statics.Type[_result[2] - 49] + "\" and " + _priceCondition +"";
-                        //else
-                        //{
-                            //sql = "select * from product where type=\"" + BuyLaptop.Resources.Statics.Type[_result[2] - 49] + "\"";// and " + _priceCondition +"";
-                        //}
                         DataTable _queryResult = m_database.GetDataTable(sql);
                         
 
@@ -163,7 +158,7 @@ namespace BuyLaptop
                             {
                                 object[] _itemArray = _queryResult.Rows[i].ItemArray;
 
-                                string _itemRow = _currentProduct++ + ". " + _itemArray[1].ToString() + " - " + _itemArray[2].ToString() + " - CPU:" + _itemArray[4].ToString() + " - RAM:" + _itemArray[8].ToString() + " - HDD:" + _itemArray[3].ToString() + " - VGA:" + _itemArray[5].ToString() + " - Size:" + _itemArray[5].ToString() + " - Gia:" + _itemArray[7].ToString();
+                                string _itemRow = _currentProduct++ + ". " + _itemArray[1].ToString() + " - " + _itemArray[2].ToString() + " - CPU:" + _itemArray[4].ToString() + " - RAM:" + _itemArray[8].ToString() + " - HDD:" + _itemArray[3].ToString() + " - VGA:" + _itemArray[5].ToString() + " - Size:" + _itemArray[6].ToString() + " - Gia:" + _itemArray[7].ToString();
                                 listBox1.Items.Add(_itemRow);
                             }
                         }
