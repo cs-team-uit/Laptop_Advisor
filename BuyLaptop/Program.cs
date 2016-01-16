@@ -15,7 +15,20 @@ namespace BuyLaptop
         [STAThread]
         static void Main()
         {
-            Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"C:\Program Files (x86)\swipl");
+			if(System.IO.Directory.Exists("C:\\Program Files (x86)\\swipl\\"))
+			{
+				Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"C:\Program Files (x86)\swipl");
+			}
+			else if(System.IO.Directory.Exists("C:\\Program Files\\swipl\\"))
+			{
+				Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"C:\Program Files\swipl");
+			}
+            else
+            {
+                MessageBox.Show("Prolog chưa được cài đăt hoặc vị trí sai, vui lòng cài đặt Prolog 6.6.5 vào vị trí mặc định trên ổ C.");
+                return;
+            }
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			if (!PlEngine.IsInitialized)
