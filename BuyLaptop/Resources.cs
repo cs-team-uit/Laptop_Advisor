@@ -18,8 +18,8 @@ namespace BuyLaptop
 			    "DELL",
 			    "HP",
 			    "LENOVO",
-			    "ACER",
-			    "ASUS"
+			    "ASUS",
+			    "ACER"
 		    };
             public static string[] Type =
 		    {
