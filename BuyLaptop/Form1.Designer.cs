@@ -33,16 +33,16 @@
             this.btn_load = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbnAskBrandY = new System.Windows.Forms.RadioButton();
             this.rbnAskBrandN = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rbnDELL = new System.Windows.Forms.RadioButton();
-            this.rbnHP = new System.Windows.Forms.RadioButton();
-            this.rbnLENOVO = new System.Windows.Forms.RadioButton();
-            this.rbnASUS = new System.Windows.Forms.RadioButton();
+            this.rbnAskBrandY = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.rbnACER = new System.Windows.Forms.RadioButton();
+            this.rbnASUS = new System.Windows.Forms.RadioButton();
+            this.rbnLENOVO = new System.Windows.Forms.RadioButton();
+            this.rbnHP = new System.Windows.Forms.RadioButton();
+            this.rbnDELL = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rbnPHIGH = new System.Windows.Forms.RadioButton();
             this.rbnPLOW = new System.Windows.Forms.RadioButton();
@@ -60,7 +60,7 @@
             // 
             // btn_query
             // 
-            this.btn_query.Location = new System.Drawing.Point(424, 216);
+            this.btn_query.Location = new System.Drawing.Point(512, 296);
             this.btn_query.Name = "btn_query";
             this.btn_query.Size = new System.Drawing.Size(75, 23);
             this.btn_query.TabIndex = 3;
@@ -71,7 +71,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(287, 25);
+            this.label11.Location = new System.Drawing.Point(330, 22);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 13);
             this.label11.TabIndex = 5;
@@ -92,7 +92,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(333, 55);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(438, 147);
+            this.listBox1.Size = new System.Drawing.Size(588, 225);
             this.listBox1.TabIndex = 9;
             // 
             // panel1
@@ -104,6 +104,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 46);
             this.panel1.TabIndex = 10;
+            // 
+            // rbnAskBrandN
+            // 
+            this.rbnAskBrandN.AutoSize = true;
+            this.rbnAskBrandN.Location = new System.Drawing.Point(132, 25);
+            this.rbnAskBrandN.Name = "rbnAskBrandN";
+            this.rbnAskBrandN.Size = new System.Drawing.Size(56, 17);
+            this.rbnAskBrandN.TabIndex = 12;
+            this.rbnAskBrandN.TabStop = true;
+            this.rbnAskBrandN.Text = "Không";
+            this.rbnAskBrandN.UseVisualStyleBackColor = true;
+            // 
+            // rbnAskBrandY
+            // 
+            this.rbnAskBrandY.AutoSize = true;
+            this.rbnAskBrandY.Location = new System.Drawing.Point(6, 25);
+            this.rbnAskBrandY.Name = "rbnAskBrandY";
+            this.rbnAskBrandY.Size = new System.Drawing.Size(38, 17);
+            this.rbnAskBrandY.TabIndex = 12;
+            this.rbnAskBrandY.TabStop = true;
+            this.rbnAskBrandY.Text = "Có";
+            this.rbnAskBrandY.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Bạn có quan tâm hãng không?";
             // 
             // panel2
             // 
@@ -118,78 +149,16 @@
             this.panel2.Size = new System.Drawing.Size(294, 59);
             this.panel2.TabIndex = 10;
             // 
-            // label1
+            // rbnACER
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Bạn có quan tâm hãng không?";
-            // 
-            // rbnAskBrandY
-            // 
-            this.rbnAskBrandY.AutoSize = true;
-            this.rbnAskBrandY.Location = new System.Drawing.Point(6, 25);
-            this.rbnAskBrandY.Name = "rbnAskBrandY";
-            this.rbnAskBrandY.Size = new System.Drawing.Size(38, 17);
-            this.rbnAskBrandY.TabIndex = 12;
-            this.rbnAskBrandY.TabStop = true;
-            this.rbnAskBrandY.Text = "Có";
-            this.rbnAskBrandY.UseVisualStyleBackColor = true;
-            // 
-            // rbnAskBrandN
-            // 
-            this.rbnAskBrandN.AutoSize = true;
-            this.rbnAskBrandN.Location = new System.Drawing.Point(132, 25);
-            this.rbnAskBrandN.Name = "rbnAskBrandN";
-            this.rbnAskBrandN.Size = new System.Drawing.Size(56, 17);
-            this.rbnAskBrandN.TabIndex = 12;
-            this.rbnAskBrandN.TabStop = true;
-            this.rbnAskBrandN.Text = "Không";
-            this.rbnAskBrandN.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Nếu có, hãy chọn hãng";
-            // 
-            // rbnDELL
-            // 
-            this.rbnDELL.AutoSize = true;
-            this.rbnDELL.Location = new System.Drawing.Point(6, 28);
-            this.rbnDELL.Name = "rbnDELL";
-            this.rbnDELL.Size = new System.Drawing.Size(52, 17);
-            this.rbnDELL.TabIndex = 12;
-            this.rbnDELL.TabStop = true;
-            this.rbnDELL.Text = "DELL";
-            this.rbnDELL.UseVisualStyleBackColor = true;
-            // 
-            // rbnHP
-            // 
-            this.rbnHP.AutoSize = true;
-            this.rbnHP.Location = new System.Drawing.Point(64, 28);
-            this.rbnHP.Name = "rbnHP";
-            this.rbnHP.Size = new System.Drawing.Size(40, 17);
-            this.rbnHP.TabIndex = 12;
-            this.rbnHP.TabStop = true;
-            this.rbnHP.Text = "HP";
-            this.rbnHP.UseVisualStyleBackColor = true;
-            // 
-            // rbnLENOVO
-            // 
-            this.rbnLENOVO.AutoSize = true;
-            this.rbnLENOVO.Location = new System.Drawing.Point(99, 28);
-            this.rbnLENOVO.Name = "rbnLENOVO";
-            this.rbnLENOVO.Size = new System.Drawing.Size(69, 17);
-            this.rbnLENOVO.TabIndex = 12;
-            this.rbnLENOVO.TabStop = true;
-            this.rbnLENOVO.Text = "LENOVO";
-            this.rbnLENOVO.UseVisualStyleBackColor = true;
+            this.rbnACER.AutoSize = true;
+            this.rbnACER.Location = new System.Drawing.Point(234, 28);
+            this.rbnACER.Name = "rbnACER";
+            this.rbnACER.Size = new System.Drawing.Size(54, 17);
+            this.rbnACER.TabIndex = 12;
+            this.rbnACER.TabStop = true;
+            this.rbnACER.Text = "ACER";
+            this.rbnACER.UseVisualStyleBackColor = true;
             // 
             // rbnASUS
             // 
@@ -202,16 +171,47 @@
             this.rbnASUS.Text = "ASUS";
             this.rbnASUS.UseVisualStyleBackColor = true;
             // 
-            // rbnACER
+            // rbnLENOVO
             // 
-            this.rbnACER.AutoSize = true;
-            this.rbnACER.Location = new System.Drawing.Point(234, 28);
-            this.rbnACER.Name = "rbnACER";
-            this.rbnACER.Size = new System.Drawing.Size(54, 17);
-            this.rbnACER.TabIndex = 12;
-            this.rbnACER.TabStop = true;
-            this.rbnACER.Text = "ACER";
-            this.rbnACER.UseVisualStyleBackColor = true;
+            this.rbnLENOVO.AutoSize = true;
+            this.rbnLENOVO.Location = new System.Drawing.Point(99, 28);
+            this.rbnLENOVO.Name = "rbnLENOVO";
+            this.rbnLENOVO.Size = new System.Drawing.Size(69, 17);
+            this.rbnLENOVO.TabIndex = 12;
+            this.rbnLENOVO.TabStop = true;
+            this.rbnLENOVO.Text = "LENOVO";
+            this.rbnLENOVO.UseVisualStyleBackColor = true;
+            // 
+            // rbnHP
+            // 
+            this.rbnHP.AutoSize = true;
+            this.rbnHP.Location = new System.Drawing.Point(64, 28);
+            this.rbnHP.Name = "rbnHP";
+            this.rbnHP.Size = new System.Drawing.Size(40, 17);
+            this.rbnHP.TabIndex = 12;
+            this.rbnHP.TabStop = true;
+            this.rbnHP.Text = "HP";
+            this.rbnHP.UseVisualStyleBackColor = true;
+            // 
+            // rbnDELL
+            // 
+            this.rbnDELL.AutoSize = true;
+            this.rbnDELL.Location = new System.Drawing.Point(6, 28);
+            this.rbnDELL.Name = "rbnDELL";
+            this.rbnDELL.Size = new System.Drawing.Size(52, 17);
+            this.rbnDELL.TabIndex = 12;
+            this.rbnDELL.TabStop = true;
+            this.rbnDELL.Text = "DELL";
+            this.rbnDELL.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nếu có, hãy chọn hãng";
             // 
             // panel3
             // 
@@ -311,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 368);
+            this.ClientSize = new System.Drawing.Size(952, 332);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -320,6 +320,7 @@
             this.Controls.Add(this.btn_load);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btn_query);
+            this.MinimizeBox = false;
             this.Name = "frm_Main";
             this.Text = "Tư vấn mua laptop";
             this.panel1.ResumeLayout(false);
