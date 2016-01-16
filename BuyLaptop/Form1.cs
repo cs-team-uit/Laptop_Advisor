@@ -20,13 +20,14 @@ namespace BuyLaptop
         Resources m_resources;
 
         SQLiteDatabase m_database;
-
+        int isLoad = 0; 
 		public frm_Main()
         {
 			connect = new ConnectProlog();
 			InitializeComponent();
 
 			m_resources = new Resources();
+            m_database = new SQLiteDatabase("laptop.s3db");
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -38,10 +39,27 @@ namespace BuyLaptop
 			connect.Load_file(FilePath);
 			MessageBox.Show("Load file success !");
 			this.btn_query.Enabled = true;
+            isLoad = 1;
 		}
 
 		private void btn_query_Click(object sender, EventArgs e)
 		{
+            if (isLoad == 0)
+            {
+                MessageBox.Show("Vui lòng load tập luật Prolog trước khi thực thi!");
+                return;
+            }
+            if ((!rbnAskBrandN.Checked && !rbnAskBrandY.Checked) || (!rbnPrice.Checked && !rbnSpecs.Checked && !rbnFashion.Checked) ||(!rbnPHIGH.Checked && !rbnPLOW.Checked ))
+            {
+                MessageBox.Show("Vui lòng chọn các tiêu chí quan tâm!");
+                return;
+            }
+            if (rbnAskBrandY.Checked && (!rbnACER.Checked && !rbnASUS.Checked && !rbnDELL.Checked && !rbnHP.Checked && !rbnLENOVO.Checked))
+            {
+                MessageBox.Show("Vui lòng chọn các hãng quan tâm!");
+                return;
+            }
+            else
             listBox1.Items.Clear();
             string brand = "";
             string type = "";
@@ -84,15 +102,16 @@ namespace BuyLaptop
                 {
                     if (word == " ")
                         continue;
+                    word.Replace(" ", string.Empty);
                     int msubword = 0;
                     string[] subword = word.Split(' ');
-                    if (word.Length != 6)
+                    if (word.Length != 5)
                     {                 
-                        for (int i = 0; i < 3; i++)
+                        for (int i = 0; i < subword.Length; i++)
                         {
                             try
                             {
-                                if (subword[i].Length == 0x00000003)
+                                if (subword[i].Length == 0x00000005)
                                 {
                                     msubword = i;
                                     break;
@@ -107,7 +126,7 @@ namespace BuyLaptop
                     try
                     {
                         string _result;
-                        if (word.Length != 6)
+                        if (word.Length != 5)
                             _result = subword[msubword];
                         else
                             _result = word;
@@ -122,15 +141,21 @@ namespace BuyLaptop
                                 _priceCondition = "price between 10000000 and 20000000";
                                 break;
                         }
-
-                        string sql = "select * from product where brand=\"" + BuyLaptop.Resources.Statics.Brand[_result[1] - 49] + "\" and type=\"" +
-                            BuyLaptop.Resources.Statics.Type[_result[2] - 49] + "\"";
-
+                        string sql;
+                        //if (rbnAskBrandY.Checked)
+                        sql = "select * from product where brand=\"" + BuyLaptop.Resources.Statics.Brand[_result[1] - 49] + "\" and type=\"" +
+                           BuyLaptop.Resources.Statics.Type[_result[2] - 49] + "\"";// and " + _priceCondition +"";
+                        //else
+                        //{
+                            //sql = "select * from product where type=\"" + BuyLaptop.Resources.Statics.Type[_result[2] - 49] + "\"";// and " + _priceCondition +"";
+                        //}
                         DataTable _queryResult = m_database.GetDataTable(sql);
+                        
 
                         if (_queryResult.Rows.Count == 0)
                         {
-                            //MessageBox.Show("Không tìm thấy sản phẩm phù hợp!!!");
+                            MessageBox.Show("Không tìm thấy sản phẩm phù hợp!!!");
+                            return;
                         }
                         else
                         {
